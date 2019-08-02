@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use(localsMiddleware);
 
 app.use(routes.home, globalRouter);
-app.use(routes.home, userRouter);
+app.use(routes.users, userRouter);
 app.use(routes.home, videoRouter);
 
 export default app;
