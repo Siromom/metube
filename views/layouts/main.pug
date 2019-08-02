@@ -1,11 +1,10 @@
 doctype html
 html
     head
-        title MeTube
+        script(src="https://kit.fontawesome.com/4090931273.js")
+        title #{pageTitle} | #{siteName}
     body
-        header 
-            h1 MeTube
+        include ../partials/header
         main
             block content
-        footer
-            span &copy; MeTube
+        include ../partials/footer
