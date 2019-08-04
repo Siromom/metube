@@ -5,7 +5,7 @@ export const videos = [
         title: 'Video awesome',
         description: 'This is description',
         views: 92,
-        videoFile: "https://archive.org/details/BigBuckBunny_124",
+        videoFile: "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
         creator: {
             id: 12777,
             name: "SeWon",
@@ -16,8 +16,8 @@ export const videos = [
         id: 3141593,
         title: 'Video super',
         description: 'This is description',
-        views: 92,
-        videoFile: "https://archive.org/details/BigBuckBunny_124",
+        views: 1,
+        videoFile: "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
         creator: {
             id: 12777,
             name: "SeWon",
@@ -28,8 +28,8 @@ export const videos = [
         id: 3141594,
         title: 'Video nice',
         description: 'This is description',
-        views: 92,
-        videoFile: "https://archive.org/details/BigBuckBunny_124",
+        views: 212,
+        videoFile: "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
         creator: {
             id: 12777,
             name: "SeWon",
@@ -40,8 +40,8 @@ export const videos = [
         id: 3141555,
         title: 'Video perfect',
         description: 'This is description',
-        views: 92,
-        videoFile: "https://archive.org/details/BigBuckBunny_124",
+        views: 233,
+        videoFile: "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
         creator: {
             id: 12777,
             name: "SeWon",
