@@ -4,7 +4,7 @@
   "description": "Cloning Youtube with Vanilla and NodeJS",
   "main": "index.js",
   "scripts": {
-    "dev:server": "nodemon --exec babel-node init.js",
+    "dev:server": "nodemon --exec babel-node init.js --ignore 'scss'",
     "dev:assets": "cross-env WEBPACK_ENV=development webpack --config webpack.config.js --mode development -w",
     "build:assets": "cross-env WEBPACK_ENV=production webpack --config webpack.config.js --mode production"
   },
