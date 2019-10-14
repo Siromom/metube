@@ -1,9 +1,12 @@
 extends layouts/main.pug
+include mixins/videoPlayer
 
 block content
     .video-detail_container
-        .video_player
-            video(src=`/${video.fileUrl}`, controls=true)
+        +videoPlayer({
+            src: video.fileUrl
+        })
+            
         .video_info
             if loggedUser && video.creator.id === loggedUser.id
                 a(href=routes.editVideo(video.id)) 
