@@ -6,7 +6,8 @@
     }
   }
   video {
-    max-width: 850px;
+    width: 100%;
+    max-width: 100%;
   }
   .videoPlayer_controls {
     opacity: 0;
@@ -14,7 +15,7 @@
     color: white;
     position: absolute;
     z-index: 9;
-    bottom: 3px;
+    bottom: 1px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
