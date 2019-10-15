@@ -25,14 +25,31 @@ function handleVolumeClick() {
 }
 
 function goFullScreen() {
-  videoContainer.requestFullscreen();
+  if (videoContainer.requestFullscreen) {
+    videoContainer.requestFullscreen();
+  } else if (videoContainer.mozRequestFullscreen) {
+    videoContainer.mozRequestFullscreen();
+  } else if (videoContainer.webkitRequestFullscreen) {
+    videoContainer.webkitRequestFullscreen();
+  } else if (videoContainer.msRequestFullscreen) {
+    videoContainer.msRequestFullscreen();
+  }
   fullScreenBtn.innerHTML = '<i class="fas fa-compress"></i>';
   fullScreenBtn.removeEventListener("click", goFullScreen);
   fullScreenBtn.addEventListener("click", exitFullScreen);
 }
 
 function exitFullScreen() {
-  document.webkitExitFullscreen();
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.mozExitFullscreen) {
+    document.mozExitFullscreen();
+  } else if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) {
+    document.msExitFullscreen();
+  }
+
   fullScreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
   fullScreenBtn.removeEventListener("click", exitFullScreen);
   fullScreenBtn.addEventListener("click", goFullScreen);
