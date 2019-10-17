@@ -46,10 +46,30 @@
   .video_comments {
     width: 100%;
     max-width: 100%;
-
     margin-top: 25px;
     .video_comment-number {
       font-size: 18px;
+    }
+    .add_comment {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 10px;
+
+      input {
+        width: 100%;
+      }
+    }
+    .video_comments-list {
+      margin-top: 50px;
+      li {
+        background-color: #3498db;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
     }
   }
 }
