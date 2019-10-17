@@ -32,7 +32,7 @@ const sendComment = async comment => {
   }
 };
 
-const handleSumbit = evnet => {
+const handleSumbit = event => {
   event.preventDefault();
   const commentInput = addCommentForm.querySelector("input");
   const comment = commentInput.value;
