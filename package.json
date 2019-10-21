@@ -4,16 +4,20 @@
   "description": "Cloning Youtube with Vanilla and NodeJS",
   "main": "index.js",
   "scripts": {
-    "dev:server": "nodemon --exec babel-node init.js --delay 2 --ignore '.scss' --ignore 'static' ",
-    "dev:assets": "cross-env WEBPACK_ENV=development webpack --config webpack.config.js --mode development -w",
-    "build:assets": "cross-env WEBPACK_ENV=production webpack --config webpack.config.js --mode production",
-    "tunnel": "ngrok http 4000"
+    "dev:server": "nodemon --exec babel-node src/init.js --delay 2 --ignore '.scss' --ignore 'static' ",
+    "dev:assets": "cd src && cross-env WEBPACK_ENV=development webpack --config webpack.config.js --mode development -w",
+    "build:assets": "cd src && cross-env WEBPACK_ENV=production webpack --config webpack.config.js --mode production",
+    "build:server": "babel src --out-dir build --ignore 'src/assets','src/static','src/webpack.config.js'",
+    "copyAll": "cp -R src/static build && cp -R src/views build",
+    "build": "npm run build:server && npm run build:assets && npm run copyAll",
+    "prebuild": "rm -rf build",
+    "tunnel": "ngrok http 4000",
+    "start": "node build/init.js",
+    "prestart": "npm run build"
   },
   "author": "SeWon Kim",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/node": "^7.5.5",
     "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.5.5",
     "@babel/runtime": "^7.6.3",
@@ -49,6 +53,9 @@
     "webpack": "^4.25.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-config-prettier": "^6.0.0",
