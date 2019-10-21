@@ -13,8 +13,7 @@
     "prebuild": "rm -rf build",
     "tunnel": "ngrok http 4000",
     "start": "node build/init.js",
-    "prestart": "npm run build",
-    "babel-version": "babel --version"
+    "prestart": "npm run build"
   },
   "author": "SeWon Kim",
   "license": "ISC",
