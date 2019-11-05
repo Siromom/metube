@@ -2,6 +2,8 @@ node_modules
 package-lock.json
 uploads
 build
+*.pdf
+유튜브 클론코딩 이수.JPG
 
 # Logs
 logs
