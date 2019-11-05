@@ -28,7 +28,7 @@ passport.use(
     {
       clientID: process.env.FB_ID,
       clientSecret: process.env.FB_SECRET,
-      callbackURL: `https://8d56f40f.ngrok.io${routes.facebookCallback}`,
+      callbackURL: `https://shielded-ocean-96927.herokuapp.com${routes.facebookCallback}`,
       profileFields: ["id", "displayName", "photos", "email"],
       scope: ["public_profile", "email"]
     },
